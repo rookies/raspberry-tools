@@ -13,9 +13,9 @@ After that, you can call **RasPi_logGPIO.sh** with the GPIO pins as an argument 
 ```bash
 ./RasPi_logGPIO.sh 14 31 23 > logfile_14_31_23.txt
 ```
-This will log the values of GPIO14, GPIO31 and GPIO23 as fast as possible and write the values into logfile_14_31_23.txt until you abort with Ctrl+C.
+This will log the values of GPIO14, GPIO31 and GPIO23 as fast as possible into logfile_14_31_23.txt until you abort with Ctrl+C.
 
-It's important to know that this program doesn't use a static sample rate and that you have to normalize it with the Python program to get usable data. This can be done on another computer, too:
+It's important to know that this program doesn't use a static sample rate and that you have to normalize it with the Python program to get usable data. You should do this on another computer, because the script needs relatively much RAM and CPU time:
 ```bash
 ./RasPi_normalizeGPIO.py logfile_14_31_23.txt > logfile_14_31_23.dat
 ```
