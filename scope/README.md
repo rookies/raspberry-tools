@@ -9,7 +9,7 @@ Before you can use it, you have to compile **RasPi_logGPIO.cpp** (on the Raspber
 ```bash
 g++ -o RasPi_logGPIO RasPi_logGPIO.cpp
 ```
-After that, you can call **RasPi_logGPIO.sh** with the GPIO pins as an argument (on the Raspberry Pi):
+After that, you can call **RasPi_logGPIO.sh** with the GPIO pins as an argument (on the Raspberry Pi, as root):
 ```bash
 ./RasPi_logGPIO.sh 14 31 23 > logfile_14_31_23.txt
 ```
@@ -24,6 +24,6 @@ Now, **logfile_14_31_23.dat** is an xoscope file. You can open it and recall the
 ## Examples ##
 I used this program to log the sensor values of the Epson Model-620, a printer for a calculating machine.
 
-The signals don't have a really big frequency, but I got pretty good results:
+The signals don't have a really big frequency, but I got pretty good results (revision 24dd853 with xoscope 2.0):
 ![Scale: 1x](http://www.abload.de/img/epson_rechenmaschine_aziby.png)
 ![Scale: 2.5x](http://www.abload.de/img/epson_rechenmaschine_qscgq.png)
